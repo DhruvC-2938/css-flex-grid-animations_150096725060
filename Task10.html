@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 10 - Testimonials</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation:bgchange 6s infinite alternate;
+}
+
+.container{
+    display:flex;
+    gap:30px;
+}
+
+.card{
+    width:250px;
+    padding:20px;
+    background:white;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+
+@keyframes bgchange{
+
+    0%{
+        background:#fd74ff;
+    }
+    50%{
+        background:#f0f0f0;
+    }
+    100%{
+        background:#74fdff;
+    }
+    
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <p>HTML</p>
+        <h4>Markup Language</h4>
+    </div>
+
+    <div class="card">
+        <p>CSS</p>
+        <h4>Styling</h4>
+    </div>
+</div>
+
+</body>
+</html>

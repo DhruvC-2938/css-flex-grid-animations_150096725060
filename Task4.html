@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task 4 - Hero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px;
+            margin-left: 200px;
+        }
+
+        .h1 {
+            flex: 1;
+            animation: slideInLeft 1s ease;
+        }
+
+        .h1 h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            font-size: 16px;
+            border: none;
+            background: #f37a02;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+        }
+
+        .btn:hover {
+            background: #e65c00;
+        }
+
+        .photo {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin-right: 200px;
+            animation: slideInRight 1s ease;
+        }
+
+        .photo img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.10);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .h1 {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="h1">
+            <h1>Images</h1>
+            <button class="btn">Get Started</button>
+        </div>
+
+        <div class="photo">
+            <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="
+                alt="Hero Image">
+        </div>
+    </section>
+
+
+</body>
+
+</html>

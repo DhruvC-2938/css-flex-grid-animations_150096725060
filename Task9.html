@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 9 - Statistics</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#f9f9f9;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:50px;
+}
+
+.card{
+    background:white;
+    text-align:center;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.number{
+    font-size:28px;
+    font-weight:bold;
+    animation:bouncetext 2s infinite;
+}
+
+@keyframes bouncetext
+{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}   
+
+@media(max-width:800px){
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+    .stats{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="stats">
+    <div class="card">
+        <div class="number">120+</div>
+        <p>Projects</p>
+    </div>
+    <div class="card">
+        <div class="number">80+</div>
+        <p>Clients</p>
+    </div>
+    <div class="card">
+        <div class="number">50+</div>
+        <p>Awards</p>
+    </div>
+    <div class="card">
+        <div class="number">5+</div>
+        <p>Years Experience</p>
+    </div>
+</div>
+
+</body>
+</html>

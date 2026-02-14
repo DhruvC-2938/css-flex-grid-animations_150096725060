@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 14 - Split Screen</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.split{
+    display:flex;
+    height:100vh;
+}
+.left, .right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    animation:fade 3s ease-in;
+}
+
+.left{
+    background:#6c63ff;
+    color:white;
+}
+
+.right{
+    background:#f4f4f4;
+}
+
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+</style>
+</head>
+<body>
+
+<div class="split">
+    <div class="left">Left Side</div>
+    <div class="right">Right Side</div>
+</div>
+
+</body>
+</html>

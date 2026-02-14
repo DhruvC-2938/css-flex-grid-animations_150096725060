@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 17 - Animated Background</title>
+<style>
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(45deg,#ff0000,#4f4b95,#00676b);
+    background-size:300% 300%;
+    animation:bgmove 6s infinite alternate;
+}
+
+h1{
+    color:white;
+    font-size:40px;
+    animation:fade 2s ease-in-out;
+}
+
+@keyframes bgmove{
+    0%{
+        background-position:0% 50%;
+    }
+    100%{
+        background-position:100% 50%;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+</style>
+</head>
+<body>
+
+<h1>Animated Section</h1>
+
+</body>
+</html>

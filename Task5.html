@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 5 - Pricing</title>
+<style>
+body{
+    display:flex;
+    justify-content:center;
+    padding:50px;
+}
+
+.pricing{
+    display:flex;
+    gap:20px;
+}
+
+.card{
+    width: 200px;
+    padding:30px ;
+    background:#eee;
+    text-align:center;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+}
+
+.highlight{
+    background:linear-gradient(45deg,rgb(239, 190, 122),rgb(174, 248, 241));
+    color:rgb(0, 0, 0);
+    animation:gradient 3s infinite alternate;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+}
+
+@keyframes gradient{
+    from{
+        filter:hue-rotate(0deg);
+    }
+    to{
+        filter:hue-rotate(180deg);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="pricing">
+    <div class="card">Basic</div>
+    <div class="card highlight">Deluxe</div>
+    <div class="card">Premium</div>
+</div>
+
+</body>
+</html>

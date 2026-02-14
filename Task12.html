@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 12 - Magazine Layout</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    padding:40px;
+    background:#f4f4f4;
+}
+
+.magazine{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.article{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    animation:fade 1s ease-in;
+}
+
+.feature{
+    grid-column:span 2;
+}
+
+@keyframes fade{
+    from{
+        opacity:0; transform:translateY(40px);
+    }
+    to{
+        opacity:1; transform:translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="magazine">
+    <div class="article feature">
+        <h2>Featured Article</h2>
+        <p>This article spans across two columns.</p>
+    </div>
+
+    <div class="article">News 1</div>
+    <div class="article">News 2</div>
+    <div class="article">News 3</div>
+</div>
+
+</body>
+</html>

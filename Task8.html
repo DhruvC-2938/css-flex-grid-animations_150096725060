@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 8 - Vertical Timeline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+.timeline{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:50px 0;
+    position:relative;
+}
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:4px;
+    height:100%;
+    background:#848484;
+}
+.event{
+    width:300px;
+    background:white;
+    padding:20px;
+    margin:30px 0;
+    border-radius:8px;
+    position:relative;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    display:flex;
+    animation:fadeUp 0.8s ease;
+}
+.event::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    width:14px;
+    height:14px;
+    background:#0000ec;
+    border-radius:50%;
+    animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+    0%{ transform:translate(-50%, -50%) scale(1); }
+    50%{ transform:translate(-50%, -50%) scale(1.4); }
+    100%{ transform:translate(-50%, -50%) scale(1); }
+}
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@media(max-width:600px){
+    .event{
+        width:90%;
+    }
+
+    .timeline::before{
+        left:20px;
+        transform:none;
+    }
+
+    .event::before{
+        left:20px;
+        transform:translateY(-50%);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="timeline">
+    <div class="event">HTML</div>
+    <div class="event">CSS</div>
+    <div class="event">JavaScript</div>
+</div>
+
+</body>
+</html>

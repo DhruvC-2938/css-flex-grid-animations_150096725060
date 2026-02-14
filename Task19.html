@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 19 - Progress Bars</title>
+<style>
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    gap:20px;
+    font-family:Arial;
+}
+
+.bar{
+    width:300px;
+    height:20px;
+    background:#ddd;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    width:0;
+    background:#5757ff;
+    animation:fill 3s forwards;
+}
+
+@keyframes fill{
+    from{width:0;}
+    to{width:80%;}
+}
+
+@media(max-width:500px){
+    .bar{
+        width:200px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="fill"></div></div>
+<div class="bar"><div class="fill"></div></div>
+
+</body>
+</html>

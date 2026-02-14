@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 3 - Grid</title>
+<style>
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:100px;
+    padding:40px;
+}
+
+.box{
+    height:120px;
+    transition:0.3s;
+    background: radial-gradient(circle, #ffcc00, #ff6600);  
+    border: 1px solid #000000;
+}
+
+.box:hover{
+    transform:scale(1.2);
+}
+</style>
+</head>
+<body>
+
+<div class="grid">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+</body>
+</html>

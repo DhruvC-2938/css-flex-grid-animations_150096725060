@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 7 - Dashboard Layout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+.dashboard{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    grid-template-rows:70px 1fr;
+    height:100vh;
+}
+.sidebar{
+    grid-column:1;
+    grid-row:1 / span 2;
+    background:#5a5a9f;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin:15px 0;
+    cursor:pointer;
+}
+.header{
+    grid-column:2;
+    grid-row:1;
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+.content{
+    grid-column:2;
+    grid-row:2;
+    padding:20px;
+    display:flex;
+    gap:20px;
+}
+.card{
+    flex:1;
+    height:120px;
+    background:#eee;
+    border-radius:10px;
+    position:relative;
+    overflow:hidden;
+    transition:transform 0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-150px;
+    width:150px;
+    height:100%;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    animation:shimmer 1.5s infinite;
+}
+
+@keyframes shimmer{
+    from{ left:-150px; }
+    to{ left:100%; }
+}
+@media(max-width:768px){
+    .dashboard{
+        grid-template-columns:1fr;
+        grid-template-rows:auto auto 1fr;
+    }
+
+    .sidebar{
+        grid-column:1;
+        grid-row:1;
+        display:flex;
+        justify-content:space-around;
+    }
+
+    .header{
+        grid-column:1;
+        grid-row:2;
+    }
+
+    .content{
+        grid-column:1;
+        grid-row:3;
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li>Home</li>
+            <li>Analytics</li>
+            <li>Reports</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <h3>Dhruv</h3>
+        <p>User Profile</p>
+    </div>
+
+    <div class="content">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
